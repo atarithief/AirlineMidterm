@@ -3,7 +3,9 @@
     padding: 0;
 }
 body {
-    font-family: 'Raleway', sans-serif;
     background-color: #F7FFFC;
     margin: auto;
+}
+.main-layout {
+    font-family: 'Sumana', serif;
 }

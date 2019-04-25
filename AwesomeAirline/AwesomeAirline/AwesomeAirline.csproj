@@ -70,11 +70,13 @@
     <Content Include="bin\AwesomeAirline.dll" />
     <Content Include="bin\AwesomeAirline.pdb" />
     <Content Include="CSS\ContactStyle.css" />
-    <Content Include="CSS\HeaderStyle.css" />
+    <Content Include="CSS\HeaderFooterStyle.css" />
     <Content Include="CSS\MainStyle.css" />
     <Content Include="HTML\Booking.html" />
     <Content Include="HTML\Contact.html" />
+    <Content Include="HTML\Footer.html" />
     <Content Include="HTML\Header.html" />
+    <Content Include="HTML\Index.html" />
     <Content Include="HTML\Sign-In.html" />
     <Content Include="Web.config" />
   </ItemGroup>
