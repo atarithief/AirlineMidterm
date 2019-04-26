@@ -5,7 +5,7 @@
     <title>Contact Us</title>
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" type="text/css" href="../CSS/ContactStyle" />
+    <link rel="stylesheet" type="text/css" href="../CSS/ContactStyle.css" />
     <link rel="stylesheet" type="text/css" href="../CSS/MainStyle.css" />
     <!-- JAVASCRIPT -->
     <!-- LIBRARY -->
@@ -31,20 +31,23 @@
     <div class="main-layout">
         <div class="header"></div>
         <div class="content">
-            <form id="contact-form">
-                <select>
-                    <optgroup id="contact-reason" label="Reason For Contacting">
-                        <option value="reservation">Reservation</option>
-                        <option value="lost baggage">Lost Baggage</option>
-                        <option value="billing">Billing</option>
-                        <option value="other">Other</option>
-                    </optgroup>
-                </select>
-                <p>Note</p>
-                <textarea></textarea><br />
-                <button>Submit</button>
-                <button>Clear</button>
-            </form>
+            <div id="form-content">
+                <form id="contact-form">
+                    <p>What do you need help with?</p>
+                    <select id="contact-reason">
+                        <optgroup label="Reason For Contacting">
+                            <option value="reservation">Reservation</option>
+                            <option value="lost baggage">Lost Baggage</option>
+                            <option value="billing">Billing</option>
+                            <option value="other">Other</option>
+                        </optgroup>
+                    </select>
+                    <p>Give more detail</p>
+                    <textarea id="contact-txt"></textarea><br />
+                    <button>Submit</button>
+                    <button>Clear</button>
+                </form>
+            </div>
         </div>
         <div class="footer"></div>
     </div>

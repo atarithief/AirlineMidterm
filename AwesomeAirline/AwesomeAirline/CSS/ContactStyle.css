@@ -3,5 +3,27 @@
     padding: 0;
 }
 body {
-    background-color: #F7FFFC;
 }
+#form-content {
+    width: 50%;
+    margin: 65px auto 65px;
+    padding: 50px;
+    background-color: rgba(146, 176, 184, 0.59);
+    box-shadow: 2px 2px 5px #d5d5d5;
+}
+#contact-reason {
+    width: 50%;
+}
+#contact-txt {
+    width: 50%;
+}
+#form-content button {
+    display: inline-block;
+    margin: auto;
+    border: none;
+    background-color: #FFF;
+    width: 20%;
+    padding: 7px;
+    margin: 5%;
+}
+
