@@ -2,14 +2,16 @@
     margin: 0;
     padding: 0;
 }
-body {
-}
 #form-content {
     width: 50%;
     margin: 65px auto 65px;
     padding: 50px;
+    background-color: rgb(146, 176, 184);
     background-color: rgba(146, 176, 184, 0.59);
     box-shadow: 2px 2px 5px #d5d5d5;
+}
+#contact-form {
+    font-family: 'Sumana', serif;
 }
 #contact-reason {
     width: 50%;
@@ -17,13 +19,11 @@ body {
 #contact-txt {
     width: 50%;
 }
-#form-content button {
+#form-content button {    
     display: inline-block;
     margin: auto;
     border: none;
     background-color: #FFF;
     width: 20%;
     padding: 7px;
-    margin: 5%;
 }
-
