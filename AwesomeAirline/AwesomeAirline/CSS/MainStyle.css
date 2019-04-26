@@ -19,7 +19,7 @@ body {
     padding: 10px;
 }
 
-@media screen and (max-width: 710px){
+@media screen and (max-width: 715px){
     .content {
         padding: 0;
         min-height: 0;
