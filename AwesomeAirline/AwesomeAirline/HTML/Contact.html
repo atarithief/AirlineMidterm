@@ -28,23 +28,25 @@
         submit,
         clear
     -->
-    <div class="header"></div>
     <div class="main-layout">
-        <form id="contact-form">
-            <select>
-                <optgroup id="contact-reason" label="Reason For Contacting">
-                    <option value="reservation">Reservation</option>
-                    <option value="lost baggage">Lost Baggage</option>
-                    <option value="billing">Billing</option>
-                    <option value="other">Other</option>
-                </optgroup>
-            </select>
-            <p>Note</p>
-            <textarea></textarea><br />
-            <button>Submit</button>
-            <button>Clear</button>
-        </form>
+        <div class="header"></div>
+        <div class="content">
+            <form id="contact-form">
+                <select>
+                    <optgroup id="contact-reason" label="Reason For Contacting">
+                        <option value="reservation">Reservation</option>
+                        <option value="lost baggage">Lost Baggage</option>
+                        <option value="billing">Billing</option>
+                        <option value="other">Other</option>
+                    </optgroup>
+                </select>
+                <p>Note</p>
+                <textarea></textarea><br />
+                <button>Submit</button>
+                <button>Clear</button>
+            </form>
+        </div>
+        <div class="footer"></div>
     </div>
-    <footer class="footer"></footer>
 </body>
 </html>
