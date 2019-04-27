@@ -63,12 +63,11 @@
     #footer-container {
         font-family: 'Montserrat', sans-serif !important;
         font-size: .9em;
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        min-height: 5vh;
         background-color: #4CDBFF;
-        line-height: 5vh;
+        position: absolute;          
+        width: 100%;
+        min-height: 7vh;       
+        line-height: 7vh;
     }
     @media screen and (max-width: 715px) {
         #nav-bar-container {

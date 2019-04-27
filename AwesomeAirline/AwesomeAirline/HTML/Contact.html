@@ -7,9 +7,10 @@
     <!-- STYLESHEETS -->
     <link rel="stylesheet" type="text/css" href="../CSS/ContactStyle.css" />
     <link rel="stylesheet" type="text/css" href="../CSS/MainStyle.css" />
-    <!-- JAVASCRIPT -->
     <!-- LIBRARY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>    
+    <!-- JAVASCRIPT -->
+    <link type="text/javascript" href="../JS/ContactScript.js" />
 
     <script>
         $(function () {
@@ -36,21 +37,68 @@
     <div class="main-layout">
         <div class="header"></div>
         <div class="content">
+            <h2 style="margin-top: 15px;">Want to talk to us?</h2>
+            <h5>Fill out this form and we'll get right back to you!</h5>
             <div id="form-content">
                 <form id="contact-form">
-                    <p>What do you need help with?</p>
-                    <select id="contact-reason">
-                        <optgroup label="Reason For Contacting">
-                            <option value="reservation">Reservation</option>
-                            <option value="lost baggage">Lost Baggage</option>
-                            <option value="billing">Billing</option>
-                            <option value="other">Other</option>
-                        </optgroup>
-                    </select>
-                    <p>Give more detail</p>
-                    <textarea id="contact-txt"></textarea><br />
-                    <button class="contact-btn">Submit</button>
-                    <button class="contact-btn">Clear</button>
+                    <div id="contact-form-container">
+                        <div id="contact-form-shape">
+                            <h4>What do you need help with?</h4>
+                            <div id="dropdown-area">
+                                <p>
+                                    <select id="contact-reason">
+                                        <optgroup label="Reason For Contacting">
+                                            <option value="reservation">Reservation</option>
+                                            <option value="lost baggage">Lost Baggage</option>
+                                            <option value="billing">Billing</option>
+                                            <option value="other">Other</option>
+                                        </optgroup>
+                                    </select>
+                                </p>
+                            </div>
+                            <div id="input-area">
+                                <table>
+                                    <tr>
+                                        <th><span class="input-title">First Name: </span></th>
+                                        <td><input type="text" name="fName" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span class="input-title">Last Name: </span></th>
+                                        <td><input type="text" name="lName" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span class="input-title">Phone Number: </span></th>
+                                        <td><input type="tel" name="phoneNum" /></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span class="input-title">Email: </span></th>
+                                        <td><input type="email" name="email" /></td>
+                                    </tr>
+                                </table>
+                                <!--<p><span class="input-title">First Name: </span><input type="text" name="fName" /></p>
+                                <p><span class="input-title">Last Name: </span><input type="text" name="lName" /></p>
+                                <p><span class="input-title">Phone Number: </span><input type="tel" name="phoneNum" /></p>
+                                <p><span class="input-title">Email: </span><input type="email" name="email" /></p>-->
+                            </div>
+                            <div id="checkbox-area">
+                                <p><h5>Perferred contact?</h5></p>
+                                <p>Email: <input type="checkbox" name="email" /></p>
+                                <p>Phone: <input type="checkbox" name="phone" /></p>
+                            </div>
+                            <div id="textarea-area">
+                                <p>
+                                    <h4>Give more detail</h4>
+                                    <textarea id="contact-txt"></textarea><br />
+                                </p>
+                            </div>
+                            <div id="button-area">
+                                <p>
+                                    <button class="contact-btn" id="left-btn">Submit</button>
+                                    <button class="contact-btn" id="right-btn">Clear</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -59,5 +107,9 @@
 </body>
 </html>
 <script>
-
+//    $(document).ready(function () {
+//        var windowSize = $(window).height();
+//        var contentSize = $(".content").outerHeight(true);
+//        alert(contentSize, windowSize);
+//});
 </script>
