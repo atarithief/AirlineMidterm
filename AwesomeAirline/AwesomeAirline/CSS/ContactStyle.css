@@ -32,6 +32,7 @@
     font-family: 'Montserrat', sans-serif !important;
     border: 1px solid #e4e2e2;
     border-radius: 2px;
+    outline: none;
 }
 #contact-form p {
     margin: 25px 0;

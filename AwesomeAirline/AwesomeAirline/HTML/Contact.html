@@ -11,7 +11,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>    
     <!-- JAVASCRIPT -->
     <link type="text/javascript" href="../JS/ContactScript.js" />
-
     <script>
         $(function () {
             $(".header").load("Header.html");
@@ -37,8 +36,11 @@
     <div class="main-layout">
         <div class="header"></div>
         <div class="content">
-            <h2 style="margin-top: 15px;">Want to talk to us?</h2>
-            <h5>Fill out this form and we'll get right back to you!</h5>
+            <div id="form-completion">
+                <p>Good job!</p>
+            </div>
+            <h2 class="form-header" style="margin-top: 15px;">Want to talk to us?</h2>
+            <h5 class="form-header">Fill out this form and we'll get right back to you!</h5>
             <div id="form-content">
                 <form id="contact-form">
                     <div id="contact-form-container">
@@ -46,7 +48,7 @@
                             <h4>What do you need help with?</h4>
                             <div id="dropdown-area">
                                 <p>
-                                    <select id="contact-reason" class="required-answer">
+                                    <select id="contact-reason" class="required-answer" required>
                                         <optgroup label="Reason For Contacting">
                                             <option value="reservation">Reservation</option>
                                             <option value="lost baggage">Lost Baggage</option>
@@ -60,19 +62,19 @@
                                 <table>
                                     <tr>
                                         <th><span class="input-title">First Name: </span></th>
-                                        <td><input class="input-user-info required-answer" id="form-fname" type="text" name="info" placeholder="John" /></td>
+                                        <td><input class="input-user-info required-answer" id="form-fname" type="text" name="info" placeholder="John" required /></td>
                                     </tr>
                                     <tr>
                                         <th><span class="input-title">Last Name: </span></th>
-                                        <td><input class="input-user-info required-answer" id="form-lname" type="text" name="info" placeholder="Smith" /></td>
+                                        <td><input class="input-user-info required-answer" id="form-lname" type="text" name="info" placeholder="Smith" required /></td>
                                     </tr>
                                     <tr>
                                         <th><span class="input-title">Phone Number: </span></th>
-                                        <td><input class="input-user-info required-answer" id="form-phone" type="tel" name="info" placeholder="(xxx) xxx-xxxx" pattern="([0-9]{3}) [0-9]{3} - [0-9]{4}" maxlength="12" /></td>
+                                        <td><input class="input-user-info required-answer" id="form-phone" type="tel" name="info" placeholder="(xxx) xxx-xxxx" maxlength="12" required /></td>
                                     </tr>
                                     <tr>
                                         <th><span class="input-title">Email: </span></th>
-                                        <td><input class="input-user-info required-answer" id="form-email" type="email" name="info" placeholder="example@website.com" /></td>
+                                        <td><input class="input-user-info required-answer" id="form-email" type="email" name="info" placeholder="example@website.com" required /></td>
                                     </tr>
                                 </table>
                             </div>
@@ -81,18 +83,18 @@
                                 <div id="required-radio">
                                     <span class="left-btn">
                                         <span class="input-title">Email: </span>
-                                        <input id="radio-email" type="radio" name="contact" value="Email" />
+                                        <input id="radio-email" class="radio-answer" type="radio" name="contact" value="Email" />
                                     </span>
                                     <span class="right-btn">
                                         <span class="input-title">Phone: </span>
-                                        <input id="radio-phone" type="radio" name="contact" value="Phone" />
+                                        <input id="radio-phone" class="radio-answer" type="radio" name="contact" value="Phone" />
                                     </span>                                     
                                 </div>
                             </div>
                             <div id="textarea-area">
                                 <p>
                                     <h4>Give more detail</h4>
-                                    <textarea id="contact-txt" class="required-answer"></textarea><br />
+                                    <textarea id="contact-txt" class="required-answer" required ></textarea><br />
                                 </p>
                             </div>
                             <div id="button-area">
@@ -112,20 +114,56 @@
 </html>
 <script>
     $(document).ready(function () {
-        $("#input-area").hide();
-        $("#left-btn").click(function () {
-            validateForm();
+        $("#form-completion").hide();
+
+        $("#contact-reason").prop("selectedIndex", -1);
+
+        $("#input-area, #checkbox-area, #textarea-area, #button-area").hide();
+
+        $("#contact-reason").change(function () {
+            $("#input-area").fadeIn("slow");
+        });
+
+        //If all input in the input-area is filled out
+        //Then show div
+
+        $("#form-email").on("keypress input", (function () {
+            var isValid = checkInput();
+            if (isValid == true) {
+                $("#checkbox-area").fadeIn("slow");
+            }
+            else {
+                alert("NO");
+            }
+        }));
+
+        $(".radio-answer").change(function () {
+            $("#textarea-area").fadeIn("slow");
+        });
+
+        $("#contact-txt").keypress(function () {
+            $("#button-area").fadeIn("slow");
+        });
+
+        $("#submit-btn").click(function () {
+            $(".form-header").hide();
+            $("#form-content").hide();
         });
     });
 
-    function validateForm() {
+    function checkInput() {
+        var isValid = true;
+        $(".input-user-info").each(function () {
+            if ($(this).empty) {
+                isValid = false;
+                return isValid;
+            }           
+        });
 
-        var fName = $("#form-fname").val();
-        var fName = $("#form-lname").val();
-        var fName = $("#form-phone").val();
-        var fName = $("#form-email").val();
-        var fName = $("#radio-email").val();
-        var fName = $("#radio-phone").val();
+        if (isValid = false)
+            return false;
+        else
+            return true;    
     }
 
 </script>
