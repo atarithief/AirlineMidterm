@@ -46,7 +46,7 @@
                             <h4>What do you need help with?</h4>
                             <div id="dropdown-area">
                                 <p>
-                                    <select id="contact-reason">
+                                    <select id="contact-reason" class="required-answer">
                                         <optgroup label="Reason For Contacting">
                                             <option value="reservation">Reservation</option>
                                             <option value="lost baggage">Lost Baggage</option>
@@ -60,41 +60,45 @@
                                 <table>
                                     <tr>
                                         <th><span class="input-title">First Name: </span></th>
-                                        <td><input type="text" name="fName" /></td>
+                                        <td><input class="input-user-info required-answer" id="form-fname" type="text" name="info" placeholder="John" /></td>
                                     </tr>
                                     <tr>
                                         <th><span class="input-title">Last Name: </span></th>
-                                        <td><input type="text" name="lName" /></td>
+                                        <td><input class="input-user-info required-answer" id="form-lname" type="text" name="info" placeholder="Smith" /></td>
                                     </tr>
                                     <tr>
                                         <th><span class="input-title">Phone Number: </span></th>
-                                        <td><input type="tel" name="phoneNum" /></td>
+                                        <td><input class="input-user-info required-answer" id="form-phone" type="tel" name="info" placeholder="(xxx) xxx-xxxx" pattern="([0-9]{3}) [0-9]{3} - [0-9]{4}" maxlength="12" /></td>
                                     </tr>
                                     <tr>
                                         <th><span class="input-title">Email: </span></th>
-                                        <td><input type="email" name="email" /></td>
+                                        <td><input class="input-user-info required-answer" id="form-email" type="email" name="info" placeholder="example@website.com" /></td>
                                     </tr>
                                 </table>
-                                <!--<p><span class="input-title">First Name: </span><input type="text" name="fName" /></p>
-                                <p><span class="input-title">Last Name: </span><input type="text" name="lName" /></p>
-                                <p><span class="input-title">Phone Number: </span><input type="tel" name="phoneNum" /></p>
-                                <p><span class="input-title">Email: </span><input type="email" name="email" /></p>-->
                             </div>
                             <div id="checkbox-area">
-                                <p><h5>Perferred contact?</h5></p>
-                                <p>Email: <input type="checkbox" name="email" /></p>
-                                <p>Phone: <input type="checkbox" name="phone" /></p>
+                                <h4>Perferred contact?</h4>
+                                <div id="required-radio">
+                                    <span class="left-btn">
+                                        <span class="input-title">Email: </span>
+                                        <input id="radio-email" type="radio" name="contact" value="Email" />
+                                    </span>
+                                    <span class="right-btn">
+                                        <span class="input-title">Phone: </span>
+                                        <input id="radio-phone" type="radio" name="contact" value="Phone" />
+                                    </span>                                     
+                                </div>
                             </div>
                             <div id="textarea-area">
                                 <p>
                                     <h4>Give more detail</h4>
-                                    <textarea id="contact-txt"></textarea><br />
+                                    <textarea id="contact-txt" class="required-answer"></textarea><br />
                                 </p>
                             </div>
                             <div id="button-area">
                                 <p>
-                                    <button class="contact-btn" id="left-btn">Submit</button>
-                                    <button class="contact-btn" id="right-btn">Clear</button>
+                                    <button class="contact-btn left-btn" id="submit-btn" type="submit">Submit</button>
+                                    <button class="contact-btn right-btn" id="clear-btn">Clear</button>
                                 </p>
                             </div>
                         </div>
@@ -107,9 +111,21 @@
 </body>
 </html>
 <script>
-//    $(document).ready(function () {
-//        var windowSize = $(window).height();
-//        var contentSize = $(".content").outerHeight(true);
-//        alert(contentSize, windowSize);
-//});
+    $(document).ready(function () {
+        $("#input-area").hide();
+        $("#left-btn").click(function () {
+            validateForm();
+        });
+    });
+
+    function validateForm() {
+
+        var fName = $("#form-fname").val();
+        var fName = $("#form-lname").val();
+        var fName = $("#form-phone").val();
+        var fName = $("#form-email").val();
+        var fName = $("#radio-email").val();
+        var fName = $("#radio-phone").val();
+    }
+
 </script>
