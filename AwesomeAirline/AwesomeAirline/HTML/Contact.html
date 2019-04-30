@@ -3,14 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <title>Contact Us</title>
-
     <!-- STYLESHEETS -->
     <link rel="stylesheet" type="text/css" href="../CSS/ContactStyle.css" />
     <link rel="stylesheet" type="text/css" href="../CSS/MainStyle.css" />
     <!-- LIBRARY -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <!-- JAVASCRIPT -->
-    <link type="text/javascript" href="../JS/ContactScript.js" />
     <script>
         $(function () {
             $(".header").load("Header.html");
@@ -19,6 +17,7 @@
             $(".footer").load("Footer.html");
         });
     </script>
+    <script src="../JS/ContactScript.js" type="text/javascript"></script>
 </head>
 <body>
     <!--
@@ -36,13 +35,10 @@
     <div class="main-layout">
         <div class="header"></div>
         <div class="content">
-            <div id="form-completion">
-                <p>Good job!</p>
-            </div>
             <h2 class="form-header" style="margin-top: 15px;">Want to talk to us?</h2>
             <h5 class="form-header">Fill out this form and we'll get right back to you!</h5>
             <div id="form-content">
-                <form id="contact-form">
+                <form id="contact-form" target="_blank" action="SuccessPage.html">
                     <div id="contact-form-container">
                         <div id="contact-form-shape">
                             <h4>What do you need help with?</h4>
@@ -88,19 +84,19 @@
                                     <span class="right-btn">
                                         <span class="input-title">Phone: </span>
                                         <input id="radio-phone" class="radio-answer" type="radio" name="contact" value="Phone" />
-                                    </span>                                     
+                                    </span>
                                 </div>
                             </div>
                             <div id="textarea-area">
                                 <p>
                                     <h4>Give more detail</h4>
-                                    <textarea id="contact-txt" class="required-answer" required ></textarea><br />
+                                    <textarea id="contact-txt" class="required-answer" required></textarea><br />
                                 </p>
                             </div>
                             <div id="button-area">
                                 <p>
                                     <button class="contact-btn left-btn" id="submit-btn" type="submit">Submit</button>
-                                    <button class="contact-btn right-btn" id="clear-btn">Clear</button>
+                                    <button class="contact-btn right-btn" id="clear-btn" type="reset">Clear</button>
                                 </p>
                             </div>
                         </div>
@@ -112,58 +108,3 @@
     </div>
 </body>
 </html>
-<script>
-    $(document).ready(function () {
-        $("#form-completion").hide();
-
-        $("#contact-reason").prop("selectedIndex", -1);
-
-        $("#input-area, #checkbox-area, #textarea-area, #button-area").hide();
-
-        $("#contact-reason").change(function () {
-            $("#input-area").fadeIn("slow");
-        });
-
-        //If all input in the input-area is filled out
-        //Then show div
-
-        $("#form-email").on("keypress input", (function () {
-            var isValid = checkInput();
-            if (isValid == true) {
-                $("#checkbox-area").fadeIn("slow");
-            }
-            else {
-                alert("NO");
-            }
-        }));
-
-        $(".radio-answer").change(function () {
-            $("#textarea-area").fadeIn("slow");
-        });
-
-        $("#contact-txt").keypress(function () {
-            $("#button-area").fadeIn("slow");
-        });
-
-        $("#submit-btn").click(function () {
-            $(".form-header").hide();
-            $("#form-content").hide();
-        });
-    });
-
-    function checkInput() {
-        var isValid = true;
-        $(".input-user-info").each(function () {
-            if ($(this).empty) {
-                isValid = false;
-                return isValid;
-            }           
-        });
-
-        if (isValid = false)
-            return false;
-        else
-            return true;    
-    }
-
-</script>

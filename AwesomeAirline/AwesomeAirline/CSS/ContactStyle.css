@@ -2,6 +2,18 @@
     margin: 0;
     padding: 0;
 }
+#success-page {
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+#success-page p {
+    margin: auto;
+    font-size: 25px;
+    padding: 0 55px;
+}
 #form-content {
     width: 50%;
     margin: 15px auto 65px;
@@ -100,23 +112,51 @@ th {
     height: 25px;
     line-height: 25px;
 }
-#form-content button {
+.contact-btn {
     display: inline-block;
     margin: auto;
     border: none;
-    background-color: #FFF;
+    background-color: transparent;
     width: 35%;
     padding: 7px;
-    border: 1px solid #e4e2e2;
-    border-radius: 2px;
+    border: 2px solid #5d5d5d;
+    border-radius: 8px;
     text-transform: uppercase;
     letter-spacing: 1.7px;
     font-weight: 600;
 }
-#form-content button:hover {
-    box-shadow: 1px 1px 5px #c8c8c8;
-    background-color: #e4f0f3;
+.contact-btn:hover {
+    box-shadow: 3px 3px 5px #c8c8c8;
+    /*background: linear-gradient(-45deg, #FFFF4C, #4CDBFF);*/
+    /*background-color: #e4f0f3;*/
     border-color: #5d5d5d;
+    cursor: pointer;
+    animation-name: button-hover;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes button-hover {
+    25% {
+        background-color: #BFF2FF;
+        color: #647c82;
+        border: 2px solid #647c82;
+    }
+    50% {
+        background-color: #BFFFE7;
+        color: #7c9b8f;
+        border: 2px solid #7c9b8f;
+    }
+    100% {
+        background-color: #FFFFBF;
+        color: #9a9a75;
+        border: 2px solid #9a9a75;
+    }
+ }
+.contact-btn:focus {
+    outline: none;
+    background-color: #bbc4c7;
 }
 .left-btn {
     float: left;
@@ -141,6 +181,13 @@ th {
     }
     #contact-form-container {
         width: 85%;
+    }
+    #success-page {
+        height: 100vh;
+        width: 100%;        
+    }
+    #success-page p {
+        padding: 0 25px;
     }
 }
 @media screen and (max-width: 800px) {
