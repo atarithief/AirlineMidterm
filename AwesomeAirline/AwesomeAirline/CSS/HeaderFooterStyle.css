@@ -91,6 +91,7 @@
         }
         .nav-link:hover {
             background-color: #F7FFFC;
+            color: #4CDBFF;
         }
         #home-link:hover {
             background-color: none !important;

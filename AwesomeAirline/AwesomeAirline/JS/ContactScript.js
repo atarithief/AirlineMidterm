@@ -21,9 +21,3 @@
         
     });
 });
-
-//function NumberFormat() {
-//    var phone = $("#form-phone").val;
-
-//    alert(phone.text);
-//}
