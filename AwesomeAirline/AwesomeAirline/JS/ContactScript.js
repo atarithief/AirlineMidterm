@@ -8,6 +8,8 @@
         $("#input-area").fadeIn("slow");
     });
 
+    $("#form-phone").inputmask("(999) 999-9999");
+
     $("#form-email").on("keypress input", (function () {
         $("#checkbox-area").fadeIn("slow");
     }));
@@ -18,6 +20,6 @@
     });
 
     $("#submit-btn").submit(function () {
-        
+        $("#contact-form").submit;
     });
 });
