@@ -1,0 +1,57 @@
+﻿#bookingContent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: auto;
+    left: 0;
+    background-image: url('../Images/plane.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+#bookHeader {
+    margin-top: 20px;
+    text-align: center;
+    color: darkorange;
+}
+
+#findFlight {
+    background-color: royalblue;
+    border-color: royalblue;
+    color: white;
+}
+
+#LeftColumn {
+    float: left;
+    width: 45%;
+}
+
+#RightColumn {
+    float: left;
+    width: 45%;
+}
+
+#bookingForm {
+    margin: auto;
+    width: 65%;
+    background: linear-gradient(-45deg, #CEF5FF, #FFFFCE);
+    height: 275px;
+    border-radius: 8px;
+    border: 1px solid #e4e2e2;
+    box-shadow: 7px 7px 10px #d5d5d5;
+    margin-top: 20px;
+}
+
+#contentBooking {
+    width: 100%;
+    margin-bottom: 26%;
+}
+
+#bookHeader {
+    text-align: center;
+}
+
+#bookingContainer {
+    width: 50%;
+    margin: auto;
+}
