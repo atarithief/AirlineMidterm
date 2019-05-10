@@ -36,13 +36,13 @@
                                 </div>
                                 <label style="margin-left:8px;margin-bottom:0;">From</label>
                                 <div class="autocomplete" style="width:300px; float:right">
-                                    <input class="form-control" id="myInput" type="text" style="margin:5px;width:90%;">
+                                    <input class="form-control" id="departAir" type="text" style="margin:5px;width:90%;">
                                 </div>
                                 <label style="margin-left:8px;margin-bottom:0;">Depature date</label>
-                                <input class="form-control" type="date" style="width:48%;margin:10px;">
+                                <input class="form-control" id="departDate" type="date" style="width:48%;margin:10px;">
                                 <br />
-                                <label style="margin:10px 10px 0px;margin-left:8px;margin-bottom:0;margin-right:10px;margin-top:10px;">Adults</label>
-                                <input class="form-control" type="number" placeholder="1" min="0" max="7" style="margin:10px;width:45%;">
+                                <label style="margin-left:8px;margin-bottom:0;margin-right:10px;margin-top:10px;">Adults</label>
+                                <input class="form-control" id="adultCount" type="number" placeholder="1" min="0" max="7" style="margin:10px;width:45%;">
                             </div>
                             <div id="RightColumn" style="width:45%;margin-left:10px;">
                                 <div class="form-check" style="width:200px;margin:10px;">
@@ -51,16 +51,16 @@
                                 </div>
                                 <label style="margin-bottom:0;margin-left:8px;">To</label>
                                 <div class="autocomplete" style="width:300px; float:right">
-                                    <input class="form-control" id="myInput1" type="text" style="margin:5px;width:90%;">
+                                    <input class="form-control" id="arriveAir" type="text" style="margin:5px;width:90%;">
                                 </div>
-                                    <label style="margin-left:8px;margin-bottom:0;">Return date</label>
-                                    <input class="form-control" type="date" style="width:48%;margin:10px;">
+                                    <label style="margin-left:8px;margin-top:28px; margin-bottom:0; float:left">Return date</label>
+                                    <input class="form-control" id="returnDate" type="date" style="width:48%;margin:10px;">
                                     <br />
-                                    <label style="margin:10px 10px 0px;margin-left:8px;margin-bottom:0;margin-top:10px;margin-right:10px;">Children</label>
-                                    <input class="form-control" type="number" placeholder="0" min="0" max="7" style="margin:10px;width:45%;">
+                                    <label style="margin-left:8px;margin-bottom:0;margin-right:10px;margin-top:10px">Children</label>
+                                    <input class="form-control" id="childCount" type="number" placeholder="0" min="0" max="7" style="margin:10px;width:45%;">
                                 </div>
 </form>
-                        <button class="btn btn-primary" type="button" id="findFlight" style="margin:auto;width:25%;height:35px;margin-top:20px;">Find Flights</button>
+                        <a href="Booked.html"/><button class="btn btn-primary" type="button" id="findFlight" onclick="submitInfo()" style="margin:auto;width:25%;height:35px;margin-top:20px;">Find Flights</button></a>
                     </div>
                 </div>
             </div>
@@ -165,12 +165,32 @@
             });
         }
 
+        function submitInfo()
+        {
+            var departAirport = document.getElementById("departAir").value;
+            var departDate = document.getElementById("departDate").value;
+
+            var arriveAirport = document.getElementById("arriveAir").value;
+            var returnDate = document.getElementById("returnDate").value;
+
+            var adultCount = document.getElementById("adultCount").value;
+            var childCount = document.getElementById("childCount").value;
+
+            localStorage.setItem("From", departAirport);
+            localStorage.setItem("To", arriveAirport);
+            localStorage.setItem("Depart Date", departDate);
+            localStorage.setItem("Return Date", returnDate);
+            localStorage.setItem("Adults", adultCount);
+            localStorage.setItem("Children", childCount);
+
+        }
+
         /*An array containing all the country names in the world:*/
         var airports = ["Seattle, WA (SEA-Seattle/Tacoma Int.)", "Dallas, TX (DAL-Love Field)", "Huntsville, AL (HSV-Madison County)", "New York, NY (All Airports)"];
 
         /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-        autocomplete(document.getElementById("myInput"), airports);
-        autocomplete(document.getElementById("myInput1"), airports);
+        autocomplete(document.getElementById("departAir"), airports);
+        autocomplete(document.getElementById("arriveAir"), airports);
     </script>
 </body>
 </html>
