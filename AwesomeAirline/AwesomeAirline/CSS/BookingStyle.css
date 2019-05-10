@@ -22,6 +22,12 @@
     color: white;
 }
 
+#clearInfo {
+    background-color: royalblue;
+    border-color: royalblue;
+    color: white;
+}
+
 #LeftColumn {
     float: left;
     width: 45%;

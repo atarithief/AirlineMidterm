@@ -60,6 +60,9 @@
                             <br />
                             <label id="retDate"></label>
                         </div>
+                        <button class="btn btn-primary" type="button" id="clearInfo" onclick="clearLS()" style="margin:auto;width:25%;height:35px;margin-top:20px;">Clear</button>
+                        <button class="btn btn-primary" type="button" id="clearInfo" style="margin:auto;width:25%;height:35px;margin-top:20px;">Payment Options</button>
+
                     </div>
                 </div>
             </div>
@@ -88,6 +91,11 @@
             deptDateTxt.innerHTML = deptDate;
             retDateTxt.innerHTML = retDate;
             flightNumTxt.innerHTML = flightNum;
+        }
+
+        function clearLS() {
+            localStorage.clear();
+            location.reload();
         }
 
         setInfo();

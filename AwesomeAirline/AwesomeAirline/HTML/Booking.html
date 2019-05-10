@@ -53,14 +53,16 @@
                                 <div class="autocomplete" style="width:300px; float:right">
                                     <input class="form-control" id="arriveAir" type="text" style="margin:5px;width:90%;">
                                 </div>
-                                    <label style="margin-left:8px;margin-top:28px; margin-bottom:0; float:left">Return date</label>
-                                    <input class="form-control" id="returnDate" type="date" style="width:48%;margin:10px;">
-                                    <br />
-                                    <label style="margin-left:8px;margin-bottom:0;margin-right:10px;margin-top:10px">Children</label>
-                                    <input class="form-control" id="childCount" type="number" placeholder="0" min="0" max="7" style="margin:10px;width:45%;">
-                                </div>
-</form>
-                        <a href="Booked.html"/><button class="btn btn-primary" type="button" id="findFlight" onclick="submitInfo()" style="margin:auto;width:25%;height:35px;margin-top:20px;">Find Flights</button></a>
+                                <label style="margin-left:8px;margin-top:28px; margin-bottom:0; float:left">Return date</label>
+                                <input class="form-control" id="returnDate" type="date" style="width:48%;margin:10px;">
+                                <br />
+                                <label style="margin-left:8px;margin-bottom:0;margin-right:10px;margin-top:10px">Children</label>
+                                <input class="form-control" id="childCount" type="number" placeholder="0" min="0" max="7" style="margin:10px;width:45%;">
+                            </div>
+                        </form>
+                        <button class="btn btn-primary" type="button" id="clearInfo" onclick="clearLS()" style="margin:auto;width:25%;height:35px;margin-top:20px;">Clear</button>
+
+                        <a href="Booked.html" /><button class="btn btn-primary" type="button" id="findFlight" onclick="submitInfo()" style="margin:auto;width:25%;height:35px;margin-top:20px;">Find Flights</button>
                     </div>
                 </div>
             </div>
@@ -182,7 +184,12 @@
             localStorage.setItem("Return Date", returnDate);
             localStorage.setItem("Adults", adultCount);
             localStorage.setItem("Children", childCount);
+        }
 
+        function clearLS()
+        {
+            localStorage.clear();
+            location.reload();
         }
 
         /*An array containing all the country names in the world:*/
