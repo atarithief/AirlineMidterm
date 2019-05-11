@@ -1,0 +1,118 @@
+﻿#bookingContent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: auto;
+    left: 0;
+    background-image: url('../Images/plane.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+}
+
+#bookHeader {
+    margin-top: 20px;
+    text-align: center;
+    color: darkorange;
+}
+
+#findFlight {
+    background-color: royalblue;
+    border-color: royalblue;
+    color: white;
+}
+
+#clearInfo {
+    background-color: royalblue;
+    border-color: royalblue;
+    color: white;
+}
+
+#LeftColumn {
+    float: left;
+    width: 45%;
+}
+
+#RightColumn {
+    float: left;
+    width: 45%;
+}
+
+#bookingForm {
+    margin: auto;
+    width: 65%;
+    background: linear-gradient(-45deg, #CEF5FF, #FFFFCE);
+    height: 300px;
+    border-radius: 8px;
+    border: 1px solid #e4e2e2;
+    box-shadow: 7px 7px 10px #d5d5d5;
+    margin-top: 20px;
+}
+
+#contentBooking {
+    width: 100%;
+    margin-bottom: 26%;
+}
+
+#bookHeader {
+    text-align: center;
+}
+
+#bookingContainer {
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+input {
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+}
+
+    input[type=text] {
+        background-color: #f1f1f1;
+        width: 100%;
+    }
+
+    input[type=submit] {
+        background-color: DodgerBlue;
+        color: #fff;
+        cursor: pointer;
+    }
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+    .autocomplete-items div {
+        padding: 10px;
+        cursor: pointer;
+        background-color: #fff;
+        border-bottom: 1px solid #d4d4d4;
+    }
+
+        /*when hovering an item:*/
+        .autocomplete-items div:hover {
+            background-color: #e9e9e9;
+        }
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+    background-color: DodgerBlue !important;
+    color: #ffffff;
+}

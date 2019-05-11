@@ -86,6 +86,7 @@ th {
 .input-user-info:focus {
     background-color: #F7FFFC;
 }
+<<<<<<< HEAD
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button,
@@ -100,6 +101,13 @@ input[type="number"]::-webkit-inner-spin-button:focus {
 input[type="number"] {
     -moz-appearance: textfield;
 }
+=======
+input[type=number]#form-phone::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+>>>>>>> master
 #checkbox-area {
    margin-top: 15px;
 }
