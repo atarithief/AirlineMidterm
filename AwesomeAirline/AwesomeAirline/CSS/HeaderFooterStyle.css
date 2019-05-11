@@ -64,7 +64,8 @@
         font-family: 'Montserrat', sans-serif !important;
         font-size: .9em;
         background-color: #4CDBFF;
-        position: absolute;          
+        position: fixed;
+        bottom: 0px;
         width: 100%;
         min-height: 7vh;       
         line-height: 7vh;
@@ -97,9 +98,5 @@
         }
         .title {
             max-height: 5vh;
-        }
-        #footer-container {
-            min-height: 7.5vh !important;
-            line-height: 7.5vh;
         }
     }
