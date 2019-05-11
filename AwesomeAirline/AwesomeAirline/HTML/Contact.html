@@ -39,7 +39,7 @@
             <h2 class="form-header" style="margin-top: 15px;">Want to talk to us?</h2>
             <h5 class="form-header">Fill out this form and we'll get right back to you!</h5>
             <div id="form-content">
-                <form id="contact-form" action="SuccessPage.html">
+                <form id="contact-form" target="_blank" action="SuccessPage.html">
                     <div id="contact-form-container">
                         <div id="contact-form-shape">
                             <h4>What do you need help with?</h4>
@@ -67,7 +67,7 @@
                                     </tr>
                                     <tr>
                                         <th><span class="input-title">Phone Number: </span></th>
-                                        <td><input class="input-user-info required-answer" id="form-phone" type="tel" name="info" placeholder="(xxx) xxx-xxxx" maxlength="14" required /></td>
+                                        <td><input class="input-user-info required-answer" id="form-phone" type="number" name="info" placeholder="(xxx) xxx-xxxx" maxlength="12" required /></td>
                                     </tr>
                                     <tr>
                                         <th><span class="input-title">Email: </span></th>
@@ -77,7 +77,7 @@
                             </div>
                             <div id="checkbox-area">
                                 <h4>Perferred contact?</h4>
-                                <div id="required-radio">                                    
+                                <div id="required-radio">
                                     <span class="left-btn">
                                         <span class="input-title">Email: </span>
                                         <input id="radio-email" class="radio-answer" type="radio" name="contact" value="Email" />

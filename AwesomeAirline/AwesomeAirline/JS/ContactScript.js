@@ -10,6 +10,18 @@
 
     $("#form-phone").inputmask("(999) 999-9999");
 
+    //$("#form-phone").keypress(function (event) {
+    //    if (isNaN(event.key)) {
+    //        alert("Only digits!");
+    //        $("#form-phone").val(function (index, value) {
+    //                return value.substr(0, value.length - 2);
+    //        });
+    //    }
+    //    //if (event.which !== 8 && event.which !== 0 ) {
+    //    //    alert("Only digits!");
+    //    //}
+    //});
+
     $("#form-email").on("keypress input", (function () {
         $("#checkbox-area").fadeIn("slow");
     }));
@@ -20,6 +32,6 @@
     });
 
     $("#submit-btn").submit(function () {
-        $("#contact-form").submit;
+        
     });
 });
