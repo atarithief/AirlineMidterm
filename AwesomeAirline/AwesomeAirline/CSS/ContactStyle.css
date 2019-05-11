@@ -86,6 +86,20 @@ th {
 .input-user-info:focus {
     background-color: #F7FFFC;
 }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button:hover,
+input[type="number"]::-webkit-inner-spin-button:hover,
+input[type="number"]::-webkit-outer-spin-button:focus,
+input[type="number"]::-webkit-inner-spin-button:focus {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
 #checkbox-area {
    margin-top: 15px;
 }
@@ -127,8 +141,6 @@ th {
 }
 .contact-btn:hover {
     box-shadow: 3px 3px 5px #c8c8c8;
-    /*background: linear-gradient(-45deg, #FFFF4C, #4CDBFF);*/
-    /*background-color: #e4f0f3;*/
     border-color: #5d5d5d;
     cursor: pointer;
     animation-name: button-hover;
@@ -206,6 +218,4 @@ th {
     th {
         width: auto;
     }
-}
-@media screen and (max-width: 600px) {
 }

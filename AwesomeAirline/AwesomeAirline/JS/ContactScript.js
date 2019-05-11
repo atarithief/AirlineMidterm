@@ -8,9 +8,9 @@
         $("#input-area").fadeIn("slow");
     });
 
-    $("#form-email").on("keypress input", (function () {
+    $("#form-email").on("keypress input", function () {
         $("#checkbox-area").fadeIn("slow");
-    }));
+    });
 
     $(".radio-answer").change(function () {
         $("#textarea-area").fadeIn("slow");
@@ -21,9 +21,3 @@
         
     });
 });
-
-//function NumberFormat() {
-//    var phone = $("#form-phone").val;
-
-//    alert(phone.text);
-//}
