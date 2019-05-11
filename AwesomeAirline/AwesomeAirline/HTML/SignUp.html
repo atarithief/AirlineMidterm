@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8" />
+    <title></title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="/CSS/signupstyle.css" />
+    <link rel="stylesheet" type="text/css" href="../CSS/MainStyle.css" />
+    <!-- JAVASCRIPT -->
+    <!-- LIBRARY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $(".header").load("Header.html");
+        });
+        $(function () {
+            $(".footer").load("Footer.html");
+        });
+
+/**/</script>
+</head>
+<body>
+    <!--fname, lname, suffix, birthdate, gender, 
+        phone, email, mailing address 2 lines, userid, password-->
+    <div class="content">
+        <form class="form" name="signupForm">
+            <h1>Sign Up</h1>
+            <br />
+            <b>Enter Name:</b><br />
+            <input type="text" placeholder="First Name" name="fname" required><br />
+            <input type="text" placeholder="Last Name" name="lname" required> <br />
+            <input type="text" placeholder="suffix" name="suffix"> <br />
+
+            <b>Birthdate:</b><br />
+            <input type="date" placeholder="Date of Birth" name="bday" required><br />
+            <!--CHANGE LATER: Maybe a drop down list or check boxes for gender selection like most forms have-->
+            <input type="text" placeholder="Gender" name="gen" required> <br />
+
+            <b>Contact:</b><br />
+            <input type="number" placeholder="Phone" name="pnumber" required /><br />
+            <input type="email" placeholder="Email Address" name="emailadd" required />
+            <br />
+
+            <b>Address:</b><br />
+            <input type="text" placeholder="line 1" name="add1" required /><br />
+            <input type="text" placeholder="line 2" name="add2" /> <br />
+            <input type="text" placeholder="City" name="City" required /><br />
+            <input type="text" placeholder="ZipCode" name="zip" required /><br />
+
+            <b>Choose Username and Password</b><br />
+            <input type="text" placeholder="Username" name="userid" required /><br />
+            <input type="password" placeholder="Password" name="userpword" required />
+
+            <button type="submit" name="btnSignUp" onclick="signupFunction()">SignUp</button>
+            <button type="button" name="btnCancel" onclick="cancelFunction()">Cancel</button>
+
+        </form>
+    </div>
+    <script>
+    function signupFunction() {
+    var firstname = document.getElementById("fname").value;
+    var lastname = document.getElementById("lname").value;
+    var suf = document.getElementById("suffix");
+    var birthday = document.getElementById("bday");
+    var gender = document.getElementById("gen");
+    var phone = document.getElementById("pnumber");
+    var email = document.getElementById("Email");
+    var addOne = document.getElementById("add1");
+    var addTwo = document.getElementById("add2");
+    var city = document.getElementById("City");
+    var zipcode = document.getElementById("zip");
+    var userID = document.getElementById("userid");
+    var password = document.getElementById("userpword");
+
+    localStorage.setItem("First Name", firstname);
+    localStorage.setItem("Last Name", lastname);
+    localStorage.setItem("Suffix", suf);
+    localStorage.setItem("Birthday", birthday);
+    localStorage.setItem("Gender", gender);
+    localStorage.setItem("Phone Number", phone);
+    localStorage.setItem("Email", email);
+    localStorage.setItem("Address Line 1", addOne);
+    localStorage.setItem("Address Line 2", addTwo);
+    localStorage.setItem("City", city);
+    localStorage.setItem("Zipcode", zipcode);
+    localStorage.setItem("UserID", userID);
+    localStorage.setItem("Password", password);
+
+}
+
+function cancelFunction() {
+    //clears the form data
+    document.getElementById("signupForm").reset();
+    //goes back to the previous page
+    window.history.back();
+}
+</ script>
+</body>
+</html>
