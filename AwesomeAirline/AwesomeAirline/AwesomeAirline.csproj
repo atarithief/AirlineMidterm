@@ -73,6 +73,7 @@
     <Content Include="CSS\ContactStyle.css" />
     <Content Include="CSS\HeaderFooterStyle.css" />
     <Content Include="CSS\MainStyle.css" />
+    <Content Include="HTML\Booked.html" />
     <Content Include="HTML\Booking.html" />
     <Content Include="HTML\Contact.html" />
     <Content Include="HTML\Footer.html" />
@@ -81,7 +82,9 @@
     <Content Include="HTML\Index.html" />
     <Content Include="HTML\Sign-In.html" />
     <Content Include="HTML\SuccessPage.html" />
+    <Content Include="Images\boarding.jpg" />
     <Content Include="Images\plane.jpg" />
+    <Content Include="JS\BookingScript.js" />
     <Content Include="JS\ContactScript.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\inputmask\bindings\inputmask.binding.js" />
