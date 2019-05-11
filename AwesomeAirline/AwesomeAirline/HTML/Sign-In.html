@@ -5,6 +5,7 @@
     <title></title>
 
     <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="/CSS/signupstyle.css" />
     <link rel="stylesheet" type="text/css" href="../CSS/MainStyle.css" />
     <!-- JAVASCRIPT -->
 
@@ -24,9 +25,39 @@
     <div class="main-layout">
         <div class="header"></div>
         <div class="content">
-            THIS IS THE SIGN-IN PAGE
+            <form class="form" name="loginForm">
+                <div>
+                    <!--ADD LOGO/NAME HERE-->
+                </div>
+                <div>
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label for="pword"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="pword" required>
+
+                    <button type="submit" name="btnLogin" onclick="submitFunction()">Login</button>
+                    <button type="reset" name="btnClearLogin" onclick="clearFunction()">Clear</button>
+                </div>
+            </form>
         </div>
         <div class="footer"></div>
     </div>
+        <script>
+        function submitFunction() {
+            //get the values of the password and username
+            var username = document.getElementById("uname").value;
+            var password = document.getElementById("pword").value;
+
+            localStorage.setItem("UserID", username);
+            localStorage.setItem("Password", password);
+
+            window.alert("Welcome");
+        }
+
+        function clearFunction() {
+            document.getElementById("loginForm").reset();
+        }
+    </script>
 </body>
 </html>
