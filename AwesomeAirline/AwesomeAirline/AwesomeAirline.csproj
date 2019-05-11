@@ -78,7 +78,6 @@
     <Content Include="HTML\Contact.html" />
     <Content Include="HTML\Footer.html" />
     <Content Include="HTML\Header.html" />
-    <Content Include="HTML\HtmlPage1.html" />
     <Content Include="HTML\Index.html" />
     <Content Include="HTML\Sign-In.html" />
     <Content Include="HTML\SuccessPage.html" />
