@@ -73,6 +73,8 @@
     <Content Include="CSS\ContactStyle.css" />
     <Content Include="CSS\HeaderFooterStyle.css" />
     <Content Include="CSS\MainStyle.css" />
+    <Content Include="CSS\signinstyle.css" />
+    <Content Include="CSS\SignUpStyle.css" />
     <Content Include="HTML\Booked.html" />
     <Content Include="HTML\Booking.html" />
     <Content Include="HTML\Contact.html" />
@@ -80,6 +82,7 @@
     <Content Include="HTML\Header.html" />
     <Content Include="HTML\Index.html" />
     <Content Include="HTML\Sign-In.html" />
+    <Content Include="HTML\SignUp.html" />
     <Content Include="HTML\SuccessPage.html" />
     <Content Include="Images\boarding.jpg" />
     <Content Include="Images\plane.jpg" />
